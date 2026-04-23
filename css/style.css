@@ -1,0 +1,128 @@
+/* Paleta Dark Tech Customizada */
+:root {
+    --dark-bg: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+}
+
+.text-muted {
+    color: white !important;
+}
+
+body.bg-dark-custom {
+    background-color: var(--dark-bg);
+}
+
+.bg-dark-transparent {
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.bg-card-custom {
+    background-color: var(--card-bg);
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.text-info {
+    color: var(--accent) !important;
+}
+
+/* Efeito de hover nos cards */
+.card {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent) !important;
+}
+
+/* Ajuste fino para os vídeos responsivos do Bootstrap */
+.ratio iframe {
+    border-radius: 8px 8px 0 0;
+}
+
+/* Estilos para botões de filtro */
+.filter-btn {
+    transition: all 0.3s ease;
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+}
+
+.filter-btn:hover {
+    background-color: var(--accent);
+    color: var(--dark-bg) !important;
+}
+
+.filter-btn.active {
+    background-color: var(--accent);
+    color: var(--dark-bg) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Estilos para Skills */
+.skill-bar {
+    background-color: rgba(56, 189, 248, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--accent);
+    display: inline-block;
+}
+
+.skill-level {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Hero Section com Background */
+.hero-section {
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(4, 6, 10, 0.7);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Efeito de Hover no Hero Content */
+.hero-content {
+    transition: all 0.4s ease;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.hero-content:hover {
+    transform: translateY(-8px);
+}
+
+.hero-content h1 {
+    transition: color 0.3s ease;
+}
+
+.hero-content:hover h1 {
+    color: var(--accent);
+}
+
+.hero-content:hover .text-info {
+    color: white !important;
+}
