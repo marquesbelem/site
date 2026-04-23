@@ -34,12 +34,7 @@ function renderProjects(projects) {
     container.innerHTML = projects.map(project => `
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100 bg-card-custom border-secondary shadow-sm">
-                ${project.video 
-                    ? `<div class="ratio ratio-16x9">
-                         <iframe src="${project.video}" allowfullscreen></iframe>
-                       </div>` 
-                    : `<img src="${project.image}" class="card-img-top" alt="${project.title}">`
-                }
+                <img src="${project.image}" class="card-img-top" alt="${project.title}">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title text-info">${project.title}</h5>
                     <p class="card-text text-secondary small">${project.description}</p>

@@ -63,6 +63,29 @@ body.bg-dark-custom {
     border-color: var(--accent) !important;
 }
 
+/* Responsividade para botões de filtro */
+.btn-group {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-group .filter-btn {
+    flex: 1 1 auto;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+    .btn-group .filter-btn {
+        flex: 1 1 calc(50% - 4px);
+        min-width: auto;
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem !important;
+    }
+}
+
 /* Estilos para Skills */
 .skill-bar {
     background-color: rgba(56, 189, 248, 0.1);

@@ -3,7 +3,6 @@
     "title": "Relic Hunters Legend",
     "description": "Online multiplayer RPG shooter desenvolvido com Unity e Node.js.",
     "tags": ["Unity", "C#", "Node.js", "Steam"],
-    "video": "https://youtu.be/wbhlLJNGjJ0?si=hWsUeIc6UCsW7wGk",
     "steam": "https://store.steampowered.com/app/633080/Relic_Hunters_Legend/",
     "image": "assets/relic-hunters.jpg"
   },
@@ -11,7 +10,6 @@
     "title": "Profane",
     "description": "MMORPG Sandbox utilizando Unity C# DOTS.",
     "tags": ["Unity DOTS", "C#", "MMO"],
-    "video": null,
     "steam": null,
     "image": "assets/profane.jpg"
   }
