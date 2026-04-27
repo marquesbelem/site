@@ -663,3 +663,27 @@ footer p {
         animation: fadeInUp 0.6s ease-out both;
     }
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content h1 span {
+        font-size: 1.8rem;
+    }
+
+    .hero-section {
+        min-height: 500px;
+        padding: 60px 0;
+    }
+
+    #projects h2, #skills h2, #events h2 {
+        font-size: 2.2rem;
+    }
+
+    .filters-container, .event-filters {
+        justify-content: flex-start !important;
+    }
+}

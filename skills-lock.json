@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "favicon-gen": {
+      "source": "jezweb/claude-skills",
+      "sourceType": "github",
+      "computedHash": "65f9d20da2de7a527e57ffeaf2ec52a898c9acdc22ae7911b91b3a6521d3a610"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
