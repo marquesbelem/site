@@ -11,7 +11,7 @@
       "Steam"
     ],
     "steam": "https://store.steampowered.com/app/633080/Relic_Hunters_Legend/",
-    "image": "assets/relic.jpg",
+    "image": "assets/projects/relic.jpg",
     "category": "Multiplayer Online"
   },
   {
@@ -26,7 +26,7 @@
     ],
     "category": "Single Player",
     "steam": "https://store.steampowered.com/app/3629580/Crislida/",
-    "image": "assets/crisalida.jpg"
+    "image": "assets/projects/crisalida.jpg"
   },
   {
     "title": "Save the Bloogs",
@@ -41,7 +41,7 @@
     ],
     "category": "Mobile",
     "steam": "https://board.fun/products/bloogs",
-    "image": "assets/savethebloogs.png"
+    "image": "assets/projects/savethebloogs.png"
   },
   {
     "title": "Slash Quest & A Reporrivel Ilha",
@@ -67,7 +67,7 @@
       "Otimização"
     ],
     "steam": "https://www.profanemmo.com/?lang=pt",
-    "image": "assets/profane.jpg",
+    "image": "assets/projects/profane.jpg",
     "category": "Multiplayer Online"
   },
   {
@@ -82,7 +82,7 @@
     ],
     "category": "Mobile",
     "steam": "https://www.youtube.com/watch?v=g2oTBVoAPpc",
-    "image": "assets/pingoal.png"
+    "image": "assets/projects/pingoal.png"
   },
   {
     "title": "Camera Punk Di-SK8",
@@ -96,7 +96,7 @@
     ],
     "category": "Single Player",
     "steam": "https://www.youtube.com/watch?v=yGJNx6NopdE",
-    "image": "assets/camera.png"
+    "image": "assets/projects/camera.png"
   },
   {
     "title": "PROACOINS",
@@ -111,7 +111,7 @@
     ],
     "category": "Mobile",
     "steam": "https://www.instagram.com/proacoins/",
-    "image": "assets/proacoins.png"
+    "image": "assets/projects/proacoins.png"
   },
   {
     "title": "Tika Books",
@@ -125,7 +125,7 @@
     ],
     "steam": "https://www.instagram.com/tikabooksoficial/",
     "category": "Mobile",
-    "image": "assets/tikabooks.png"
+    "image": "assets/projects/tikabooks.png"
   },
   {
     "title": "Sistemas Embarcados e Cassino",

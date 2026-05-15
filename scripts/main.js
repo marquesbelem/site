@@ -7,6 +7,10 @@ async function loadProjects() {
     try {
         const response = await fetch('./data/projects.json');
         allProjects = await response.json();
+        
+        // Ordena para que os projetos COM imagem apareçam primeiro
+        allProjects.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0));
+        
         renderProjects(allProjects);
     } catch (error) {
         console.error('Erro ao carregar projetos:', error);
@@ -29,6 +33,10 @@ async function loadEvents() {
     try {
         const response = await fetch('./data/events.json');
         allEvents = await response.json();
+        
+        // Ordena para que as participações COM imagem apareçam primeiro
+        allEvents.sort((a, b) => (b.image ? 1 : 0) - (a.image ? 1 : 0));
+        
         renderEvents(allEvents);
     } catch (error) {
         console.error('Erro ao carregar eventos:', error);
@@ -58,7 +66,12 @@ function renderProjects(projects) {
     container.innerHTML = projects.map(project => `
         <div class="col-12 col-md-6 col-lg-4">
             <div class="card h-100">
-                ${project.image ? `<img src="${project.image}" class="card-img-top" alt="${project.title}">` : ''}
+                ${project.image 
+                    ? `<img src="${project.image}" class="card-img-top" alt="${project.title}">` 
+                    : `<div class="card-img-top default-img d-flex align-items-center justify-content-center">
+                           <i class="fas fa-laptop-code fa-3x" style="color: rgba(255,255,255,0.05);"></i>
+                       </div>`
+                }
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${project.title}</h5>
                     <p class="card-text">${project.description}</p>
@@ -121,17 +134,30 @@ function renderEvents(events) {
     }
 
     container.innerHTML = events.map(event => `
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="event-item">
-                <span class="event-date">${event.date}</span>
-                <h3 class="event-title">${event.title}</h3>
-                <span class="event-role">${event.role}</span>
-                <p class="event-description">${event.description}</p>
-                ${event.link ? `
-                    <a href="${event.link}" target="_blank" class="details-link">
-                        Ver mais detalhes <i class="fas fa-external-link-alt"></i>
-                    </a>
-                ` : ''}
+                ${event.image ? `
+                    <div style="overflow: hidden;">
+                        <img src="${event.image}" class="event-img" alt="${event.title}">
+                    </div>
+                ` : `
+                    <div class="event-img default-img d-flex align-items-center justify-content-center" style="overflow: hidden;">
+                        <i class="fas fa-calendar-alt fa-3x" style="color: rgba(255,255,255,0.05);"></i>
+                    </div>
+                `}
+                <div class="event-content">
+                    <span class="event-date">${event.date}</span>
+                    <h3 class="event-title">${event.title}</h3>
+                    <span class="event-role">${event.role}</span>
+                    <p class="event-description">${event.description}</p>
+                    ${event.link ? `
+                        <div class="mt-auto pt-3">
+                            <a href="${event.link}" target="_blank" class="details-link">
+                                Ver mais detalhes <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    ` : ''}
+                </div>
             </div>
         </div>
     `).join('');
