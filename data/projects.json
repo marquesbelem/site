@@ -10,7 +10,7 @@
       "AWS",
       "Steam"
     ],
-    "steam": "https://store.steampowered.com/app/633080/Relic_Hunters_Legend/",
+    "link": "https://store.steampowered.com/app/633080/Relic_Hunters_Legend/",
     "image": "assets/projects/relic.jpg",
     "category": "Multiplayer Online"
   },
@@ -25,7 +25,7 @@
       "Steam"
     ],
     "category": "Single Player",
-    "steam": "https://store.steampowered.com/app/3629580/Crislida/",
+    "link": "https://store.steampowered.com/app/3629580/Crislida/",
     "image": "assets/projects/crisalida.jpg"
   },
   {
@@ -40,7 +40,7 @@
       "Unit Testing"
     ],
     "category": "Mobile",
-    "steam": "https://board.fun/products/bloogs",
+    "link": "https://board.fun/products/bloogs",
     "image": "assets/projects/savethebloogs.png"
   },
   {
@@ -53,7 +53,7 @@
       "Steam"
     ],
     "category": "Single Player",
-    "steam": null,
+    "link": null,
     "image": null
   },
   {
@@ -66,7 +66,7 @@
       "ECS",
       "Otimização"
     ],
-    "steam": "https://www.profanemmo.com/?lang=pt",
+    "link": "https://www.profanemmo.com/?lang=pt",
     "image": "assets/projects/profane.jpg",
     "category": "Multiplayer Online"
   },
@@ -81,7 +81,7 @@
       "JSON"
     ],
     "category": "Mobile",
-    "steam": "https://www.youtube.com/watch?v=g2oTBVoAPpc",
+    "link": "https://www.youtube.com/watch?v=g2oTBVoAPpc",
     "image": "assets/projects/pingoal.png"
   },
   {
@@ -95,7 +95,7 @@
       "UI/UX"
     ],
     "category": "Single Player",
-    "steam": "https://www.youtube.com/watch?v=yGJNx6NopdE",
+    "link": "https://www.youtube.com/watch?v=yGJNx6NopdE",
     "image": "assets/projects/camera.png"
   },
   {
@@ -110,7 +110,7 @@
       "Google Play"
     ],
     "category": "Mobile",
-    "steam": "https://www.instagram.com/proacoins/",
+    "link": "https://www.instagram.com/proacoins/",
     "image": "assets/projects/proacoins.png"
   },
   {
@@ -123,7 +123,7 @@
       "Audio Recording",
       "UI Refactoring"
     ],
-    "steam": "https://www.instagram.com/tikabooksoficial/",
+    "link": "https://www.instagram.com/tikabooksoficial/",
     "category": "Mobile",
     "image": "assets/projects/tikabooks.png"
   },
@@ -138,7 +138,7 @@
       "SVN"
     ],
     "category": "Embarcados",
-    "steam": null,
+    "link": null,
     "image": null
   },
   {
@@ -151,7 +151,33 @@
       "RESTful API"
     ],
     "category": "Sistemas",
-    "steam": null,
+    "link": null,
     "image": null
+  },
+  {
+    "title": "Filtro Instagram - Manual Produtora",
+    "description": "Desenvolvimento de filtro interativo para o Instagram utilizando Meta Spark Studio. Aplicação de lógica de programação em ambiente low-code e conceitos de game engines para a criação de comportamentos dinâmicos.",
+    "tags": [
+      "Spark AR",
+      "Instagram",
+      "Low-Code",
+      "Game Engines",
+      "Mobile"
+    ],
+    "category": "Mobile",
+    "link": "https://www.linkedin.com/posts/camila-marques-belem_ol%C3%A1-pessoal-uns-meses-atr%C3%A1s-o-bruno-nunes-activity-7241431276048568320-b_eI?utm_source=share&utm_medium=member_desktop&rcm=ACoAABnCsQMBvsU9iO1qJMP32wD2PFjbIKWJGZc",
+    "image": "./assets/projects/manual-produtora.png"
+  },
+  {
+    "title": "Roleta Interativa - Sakura Turismo",
+    "tags": [
+      "Unity",
+      "C#",
+      "Ativação"
+    ],
+    "link": "https://www.linkedin.com/posts/camila-marques-belem_recentemente-criei-um-pequeno-projeto-de-activity-7193810381490765825-37G6?utm_source=share&utm_medium=member_desktop&rcm=ACoAABnCsQMBvsU9iO1qJMP32wD2PFjbIKWJGZc",
+    "category": "Mobile",
+    "description": "Desenvolvimento sob medida de um software de roleta interativa para ativação de marca em evento promocional. Implementação completa na Unity de mecânicas de sorteio, efeitos visuais, sonorização e arquitetura de exibição para múltiplos monitores (tela de público e painel de configuração do operador).",
+    "image": "assets/projects/roleta.png"
   }
 ]

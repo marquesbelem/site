@@ -79,8 +79,8 @@ function renderProjects(projects) {
                         <div class="mb-3">
                             ${project.tags.map(tag => `<span class="badge">${tag}</span>`).join('')}
                         </div>
-                        ${project.steam 
-                            ? `<a href="${project.steam}" target="_blank" class="details-link">Mais informações <i class="fas fa-external-link-alt"></i></a>` 
+                        ${project.link 
+                            ? `<a href="${project.link}" target="_blank" class="details-link">Mais informações <i class="fas fa-external-link-alt"></i></a>` 
                             : ''
                         }
                     </div>
