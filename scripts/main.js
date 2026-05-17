@@ -92,27 +92,41 @@ function renderProjects(projects) {
 
 function renderFilterButtons() {
     const filterContainer = document.querySelector('.filters-container');
+    const mobileDropdown = document.getElementById('mobile-projects-filters');
     
     filterContainer.innerHTML = allFilters.map((filter, index) => {
         const isActive = index === 0 ? 'active' : '';
-        
         return `<button type="button" class="filter-btn ${isActive}" data-category="${filter.name}">${filter.name}</button>`;
     }).join('');
+
+    if (mobileDropdown) {
+        mobileDropdown.innerHTML = allFilters.map((filter, index) => {
+            const isActive = index === 0 ? 'active text-info' : '';
+            return `<li><a class="dropdown-item mobile-filter-btn ${isActive}" href="javascript:void(0)" data-category="${filter.name}">${filter.name}</a></li>`;
+        }).join('');
+    }
 }
 
 function setupFilterButtons() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const desktopButtons = document.querySelectorAll('.filter-btn');
+    const mobileButtons = document.querySelectorAll('.mobile-filter-btn');
+    const allBtns = [...desktopButtons, ...mobileButtons];
 
-    filterButtons.forEach(button => {
+    allBtns.forEach(button => {
         button.addEventListener('click', () => {
-            // Remover classe 'active' de todos os botões
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Adicionar classe 'active' ao botão clicado
-            button.classList.add('active');
-
-            // Obter categoria selecionada
             const selectedCategory = button.getAttribute('data-category');
+            
+            // Atualizar active state nos botões desktop
+            desktopButtons.forEach(btn => {
+                if(btn.getAttribute('data-category') === selectedCategory) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+
+            // Atualizar active state nos botões mobile
+            mobileButtons.forEach(btn => {
+                if(btn.getAttribute('data-category') === selectedCategory) btn.classList.add('active', 'text-info');
+                else btn.classList.remove('active', 'text-info');
+            });
 
             // Filtrar projetos usando Array.filter()
             const filtered = selectedCategory === 'Todos' 
@@ -165,22 +179,40 @@ function renderEvents(events) {
 
 function renderEventFilters() {
     const filterContainer = document.querySelector('.event-filters');
+    const mobileDropdown = document.getElementById('mobile-events-filters');
     
     filterContainer.innerHTML = allEventFilters.map((filter, index) => {
         const isActive = index === 0 ? 'active' : '';
         return `<button type="button" class="event-filter-btn ${isActive}" data-category="${filter.name}">${filter.name}</button>`;
     }).join('');
+
+    if (mobileDropdown) {
+        mobileDropdown.innerHTML = allEventFilters.map((filter, index) => {
+            const isActive = index === 0 ? 'active text-info' : '';
+            return `<li><a class="dropdown-item mobile-event-filter-btn ${isActive}" href="javascript:void(0)" data-category="${filter.name}">${filter.name}</a></li>`;
+        }).join('');
+    }
 }
 
 function setupEventFilterButtons() {
-    const filterButtons = document.querySelectorAll('.event-filter-btn');
+    const desktopButtons = document.querySelectorAll('.event-filter-btn');
+    const mobileButtons = document.querySelectorAll('.mobile-event-filter-btn');
+    const allBtns = [...desktopButtons, ...mobileButtons];
 
-    filterButtons.forEach(button => {
+    allBtns.forEach(button => {
         button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
             const selectedCategory = button.getAttribute('data-category');
+            
+            desktopButtons.forEach(btn => {
+                if(btn.getAttribute('data-category') === selectedCategory) btn.classList.add('active');
+                else btn.classList.remove('active');
+            });
+
+            mobileButtons.forEach(btn => {
+                if(btn.getAttribute('data-category') === selectedCategory) btn.classList.add('active', 'text-info');
+                else btn.classList.remove('active', 'text-info');
+            });
+
             const filtered = selectedCategory === 'Todos' 
                 ? allEvents 
                 : allEvents.filter(event => event.category === selectedCategory);

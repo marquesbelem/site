@@ -754,18 +754,44 @@ footer p {
         margin-bottom: 2.5rem;
     }
 
-    .filters-container,
-    .event-filters {
-        justify-content: flex-start !important;
-        padding-bottom: 10px;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        -webkit-overflow-scrolling: touch;
+    /* Estilos do Dropdown de Filtro Mobile */
+    .filter-mobile-btn {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-light);
+        color: var(--text-primary);
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
     }
-
-    .filter-btn,
-    .event-filter-btn {
-        flex-shrink: 0;
+    
+    .filter-mobile-btn:hover, .filter-mobile-btn:focus {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+    
+    .custom-dropdown {
+        background: rgba(21, 21, 37, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        padding: 8px 0;
+    }
+    
+    .custom-dropdown .dropdown-item {
+        color: var(--text-secondary);
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    .custom-dropdown .dropdown-item:hover,
+    .custom-dropdown .dropdown-item.active {
+        background: rgba(0, 242, 255, 0.1);
+        color: var(--accent);
     }
 
     .event-item {

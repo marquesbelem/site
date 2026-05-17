@@ -101,10 +101,20 @@
 
     <!-- Projects Section -->
     <section id="projects" class="container">
-        <h2>Projetos</h2>
+        <div class="position-relative">
+            <h2>Projetos</h2>
+            <!-- Dropdown Filter (Mobile Only) -->
+            <div class="dropdown d-md-none filter-mobile-wrapper" style="position: absolute; right: 0; top: 0; z-index: 20;">
+                <button class="filter-mobile-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Filtrar">
+                    <i class="fas fa-filter"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark custom-dropdown" id="mobile-projects-filters">
+                </ul>
+            </div>
+        </div>
 
-        <!-- Filter Buttons -->
-        <div class="filters-container d-flex justify-content-start flex-wrap gap-3 mb-5"></div>
+        <!-- Filter Buttons (Desktop Only) -->
+        <div class="filters-container d-none d-md-flex justify-content-start flex-wrap gap-3 mb-5"></div>
 
         <!-- Project Cards -->
         <div id="project-container" class="row g-4"></div>
@@ -215,10 +225,20 @@
 
     <!-- Participações Section -->
     <section id="events" class="container py-5">
-        <h2>Participações</h2>
+        <div class="position-relative">
+            <h2>Participações</h2>
+            <!-- Dropdown Filter (Mobile Only) -->
+            <div class="dropdown d-md-none filter-mobile-wrapper" style="position: absolute; right: 0; top: 0; z-index: 20;">
+                <button class="filter-mobile-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Filtrar">
+                    <i class="fas fa-filter"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark custom-dropdown" id="mobile-events-filters">
+                </ul>
+            </div>
+        </div>
 
-        <!-- Event Filters -->
-        <div class="event-filters d-flex justify-content-start flex-wrap gap-3 mb-5"></div>
+        <!-- Event Filters (Desktop Only) -->
+        <div class="event-filters d-none d-md-flex justify-content-start flex-wrap gap-3 mb-5"></div>
 
         <!-- Events Container -->
         <div id="events-container" class="row g-4"></div>
